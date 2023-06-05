@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONAL PORTFOLIO </title>
+    <link rel="stylesheet" href="style.js">
+    <style>
+        /*Source: https://www.dafont.com/ */
+
+                @font-face {
+                font-family: "Bebas Neue-Regular" , sans-serif;
+                src: url(../media/BebasNeue-Regular.ttf);
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                list-style: none;
+                text-decoration: none;
+                scroll-behavior: smooth;
+                scroll-padding-top: 20px;
+                }
+
+                :root {
+                --main-color: #033a80;
+                --bg-color: #fff;
+                --text-color: #0f0c27;
+                --hover: hsl(100, 50%, 51%);
+                --big-font: 16px;
+                --medium-font: 19px;
+                --p-font: 15px;
+
+                }
+                section {
+                padding: 50px 10%;   
+                }  
+                body {
+                background: var(--bg-color);
+                color: var(--text-color);
+                }
+                ::selection {
+                background: var(--main-color);
+                color: var(--bg-color);
+                }
+
+                .Heading {
+                    text-align: left;
+                }
+
+                .Heading h2 {
+                    font-size: 32px;
+                }
+
+                .Heading span {
+                    font-size: var(--p-font);
+                    color: rgb(3, 1, 17);
+                }
+
+                header {
+                position: absolute;
+                width: 85%;
+                top: 0;
+                right: 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                background: var(--bg-color);
+                padding: 13px 10%;
+                transition: 0.2s;
+                box-shadow: -3px -4px 8px #ffffff73,  2px  2px 5px rgb(27, 25, 25);
+                }
+
+                .logo {
+                font-size: 26px;
+                font-weight: 600;
+                color: var(--text-color);
+                }
+
+                .logo span {
+                font-size: 26px;
+                font-weight: 200;
+                color: crimson;
+                }
+
+                .navbar{
+                display: flex;
+                }
+
+                .navbar a{
+                font-size: 10%;
+                padding: 20px 5px;
+                color: var(--text-color);
+                font-weight: 300;
+                }
+
+                .navbar a:hover {
+                    color: var(--hover);
+                }
+
+                #menu icon{
+                font-size: 24px;
+                cursor: pointer;
+                z-index: 10001;
+                display: none;
+                }
+
+                #darkmode{
+                font-size: 22px;
+                cursor: pointer;
+                }
+
+                .Home {
+                    position: relative;
+                    width: 100%;
+                    min-height: 100vh;
+                    display: grid;
+                    grid-template-columns: 0.2fr 1fr 1fr;
+                    align-items: center;
+                    gap: 16px;
+                }
+
+                .Home-img {
+                    order: 2;
+
+                }
+
+                .Home-img img {
+                    width: 100%;
+                }
+                .Home-text span {
+                    font-size: var(--medium-font);
+                    font-weight: 500;
+                }
+                .Home-text h1{
+                    font-size: var(--big-font);
+                }
+                .Home-text h2 {
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+                .Home-text p {
+                    font-size: var(--p-font);
+                    font-weight: 800;
+                    margin: 10px 0 20px;
+                    color: rgb(102, 6, 78);     
+                }
+
+                .social {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .social a{
+                    margin-bottom: 16px;
+                    font-size: 22px;
+                    color: var(--text-color);
+                }
+
+                .social a:hover {
+                    color: var(--hover);
+                }
+                .btn {
+                    display: inline-block;
+                    background: var(--main-color);
+                    color: #fff;
+                    padding: 11px 21px;
+                    border: 0.6rem;
+                }
+                .btn:hover {
+                    background: var(--hover);
+                }
+                .About-container { 
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 48px;
+                    margin-top: 80px;
+                }
+                .About-img img {
+                    width: 50%;
+                    border-radius: 11px;
+                }
+                .About-text p{
+                    font-size: var(--p-font);
+                    font-weight: 400;
+                    text-align: justify;
+                }
+                .Information {
+                    margin: 16px 0 22px;
+                }
+                .Information .info-box {
+                    display: flex;
+                    align-items: left;
+                     text-align: left;
+                    margin-bottom: 22px;
+                }
+                .Information .info-box span{
+                    font-weight: 400;
+                    margin-left: 16px;
+
+                }
+                .skills-container {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    align-items: center;
+                    gap: 80px;
+                    margin-top: 64px;
+                }
+                .skills-img {
+                    width: 80%;
+                    padding-left: 80px;
+                    object-position: center;
+                }
+
+                .bars-box {
+                    position: relative;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 16px 0;
+                    margin-bottom: 16px;
+                }
+                
+                .bars-box  h3{
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+
+                .bars-box span {
+                    position: -ms-page;
+                    font-size: 20px;
+                    font-weight: 500;
+                    margin: 40px;
+
+                }
+
+                .light-bar {
+                    position: absolute;
+                    bottom: 0;
+                    right: 80;
+                    width: 100%;
+                    height: 10px;
+                    background: hsla(270, 73%, 18%, 0.801);
+                    border-radius: 8px;
+                    
+                }
+            
+
+                    </style>
+</head>
+<body>
+    <!-- Navbar section-->
+    <header>
+        <a href="#" class="logo">PORT<span>FOLIO</span>.</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="#"></a>Home</li>
+            <li><a href="#"></a>About</li>
+            <li><a href="#"></a>Education Background</li>
+            <li><a href="#"></a>Working Experience</li>
+            <li><a href="#"></a>Projects</li>
+            <li><a href="#"></a>Skills and Achievements</li>
+            <li><a href="#"></a>Contact</li>
+            <div class="bx bx-moon" id="darkmode"></div>
+        </ul>
+    </header>
+   
+    
+    <!--Home Section Start-->
+    <section class="Home" id="Home">
+        <div class="social">
+            <a href="#"><i class="bx bxl-github"></i></a>
+            <a href="#"><i class="bx bxl-LinkedIn"></i></a>
+        
+        </div>
+            <div class="Home-img">
+            <img src="main.png" alt="">
+        </div>
+            <div class="Home-text">
+                <span>Hello, I'm </span>
+                <h1>USHANTINIE UTHAYASURIAN</h1>
+                <h2>Fresh Graduate </h2>
+                <p>ELECTRONICS ENGINEER DELVING</p> 
+                <p> INTO THE WORLD OF WEB DEVELOPMENT!!!</p>
+            </div>
+    </section>
+    <!--Home Section End-->
+
+    <!--About Section Start-->
+    <section class="About" id="About">
+        <div class="Heading">
+            <h2>About Me</h2>
+            <span>Introduction</span>
+        </div>
+        <div class="About-container">
+            <div class="About-img">
+                <img src="main.png" alt="">
+            </div>
+            <div class="About-text"> 
+            <p>As a fresh graduate in electronic engineering with a passion for
+                software development. Seeking an entry-level position to
+                kickstart my career in software engineering field where I can
+                work collaboratively with a team of experienced developers to
+                design, develop, test, and deploy software applications that
+                solve real-world problems.</p>
+                <span>Email Address:-</span>
+            <div class="Information">
+                <div class="info-box">
+                    <i class="bx bxs-user"></i>
+                    <span>u.ushantinie1597@gmail.com</span>
+                </div>
+                <span>Contact Number:-</span>
+                <div class="info-box">
+                    <i class="bx bxs-user"></i>
+                    <span>+60168334817</span>
+                </div>
+            </div>
+            
+            <embed src ="path/CV USHANTINIE UTHAYASORIAN.pdf" > <button>Download CV</button>
+           
+    
+          
+    </body>
+    </html>
+        </div>
+    </div>
+    </section>
+    <!--About Section End-->
+
+    <!--Education Background Section Start-->
+    <section class="education" id="education">
+        <div class="Heading">
+            <h2>Education Background</h2>
+            <span>Bachelor of Electronic Engineering Technology (Computer System) with Honors</span>
+            <br>
+            <span>at Universiti Malaysia Pahang</span>
+        </br>
+            <span>September 2018 - August 2022 </span>
+            <br>
+            <span>CGPA: 3.20</span>
+        </br>
+            
+        <br>
+            <span>Diploma Electronic Engineering</span>
+        <br>
+            <span>at Polytechnic Seberang Perai, Pulau Pinang</span>
+        </br>
+            <span>June 2014 - April 2018 </span>
+        <br>
+            <span>CGPA: 3.03</span>
+        </br>    
+        </div>
+        
+    <!--Education Background Section End-->
+
+    <!--Working Experience Section Start-->
+    <section class="Experiences" id="Experiences">
+        <div class="Heading">
+                <h2>Work Experiences</h2>
+                <div class="work-entry">
+                  <h3>Internship Trainee </h3>
+                  <span> SMEC Malaysia</span>
+                  <p>(11/2017 - 4/2018) </p>
+                  <ul>
+                    <li>Acquired knowledge about the engineering calculations using by Ecodial advance calculation 4.8.</li>
+                    <li>Assisted senior engineers in record keeping of documents issued.</li>
+                    <li>Analyzed and found solutions for problems with electrical and fixture issues.</li>
+                  </ul>
+                </div>
+                
+                <div class="work-entry">
+                    <h3>Electrical CAD Designer </h3>
+                    <span>SMEC Malaysia</span>
+                    <p>Contract (5/2018 - 6/2018)</p>
+                    <ul>
+                      <li>Reviewed and understood comments on design drawings provided by Client.</li>
+                      <li>Prepared and drafted the drawings using AutoCAD.</li>
+                      <li>Liaised with Project Manager and involved in MRT2 project works.</li>
+                    </ul>
+                  </div>
+
+            <div class="work-entry">
+                <h3>Internship Trainee </h3>
+                <span>Orieus Electronics (M) Sdn.Bhd </span>
+                <p>(3/2022 - 8/2022)</p>
+                
+                <ul>
+                  <li>Committed in the development of AUBO Robotics specifications for projects.</li>
+                  <li>Acquired knowledge of robotics hardware and software systems.</li>
+                  <li>Analyzed integrated system behavior to troubleshoot, diagnose, and repair real-time software.</li>
+                  <li>Performed reliability tests on motor components.</li>
+                  <li>Supported design and detailing to ensure the timely release of engineering designs for manufacturing.</li>
+                </ul>
+              </div>
+
+              <div class="work-entry">
+                <h3>Lead Generation Executive </h3>
+                <span>Jobstreet by Seek </span>
+                <p>(3/2023 - present)</p>
+                
+                <ul>
+                  <li>To perform internal and external quality checks for newly converted leads verification and compliance.</li>
+                  <li>To verify documents and detect any non-compliance to business requirements and internal guidelines.</li>
+                  <li>Support in handling inbound leads & requests when required by verifying information and documentation for
+                    effective sales closure by Account Managers.</li>
+                  <li>Support the daily sales operational and administrative tasks
+                    to ensure business continuity and operations are running
+                    smoothly.</li>
+                  <li>Be responsible to update key information into the system
+                    and keep proper records on daily tasks for compilation of
+                    management reporting.</li>
+                    <li>Utilize sales leads database to generate potential leads
+                    from online / offline sources to support the business
+                    growth.</li>
+                    <li>Need to support on other additional task that is necessary
+                    as a business requirement or process enhancement.</li>
+                </ul>
+              </div>
+            
+
+    <!--Working Experience Section End-->
+
+    <!--Projects Section Start-->
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Final Year Project 2022</p>
+        <span>The operation of the proposed water
+            boat with wide range of extension arms. An algorithm has
+            been developed to task the microcontroller to read the inputs
+            from the Arduino Mega 2560 and ultrasonic sensors and
+            based on the sensed information take appropriate action.
+            Once an object is detected by the ultrasonic sensors, the servo
+            motor will move to the object for collect the trash.</span>
+
+            <p>Open a PDF file <a href="C:\xampp\htdocs\PERSONAL WEBSITE\resume">example</a>.</p> 
+            
+    </section>
+<!--Projects Section Start-->
+
+    <!--Skills Section Start-->
+    <section class="skills" id="skills">
+        <div class="Heading">
+            <h2>Skills</h2>
+            <span>My Skills</span>
+        </div>
+        <div class="skills-container">
+            <div class="bars">
+                <div class="bars-box">
+                    <h3>C++</h3>
+                    <span>Intermediate</span>
+                    <div class="light-bar"></div>
+                </div>
+                <div class="bars-box">
+                    <h3>HTML</h3>
+                    <span>Intermediate</span>
+                    <div class="light-bar"></div>
+                </div>
+                <div class="bars-box">
+                    <h3>CSS</h3>
+                    <span>Intermediate</span>
+                    <div class="light-bar"></div>
+                </div>
+                <div class="bars-box">
+                    <h3>JavaScript</h3>
+                    <span>Intermediate</span>
+                    <div class="light-bar"></div>
+                </div>
+                <div class="bars-box">
+                    <h3>PHP</h3>
+                    <span>Beginner</span>
+                    <div class="light-bar"></div>
+                </div>
+                <div class="bars-box">
+                    <h3>AutoCAD</h3>
+                    <span>Advance</span>
+                    <div class="light-bar"></div>
+                </div>
+            </div>
+            <div class="skils-img">
+                <img src="main.png" alt="">
+
+            </div>
+        </div>
+
+    </section>
+    <!--Skills Section End-->
+
+    <!--Contact Section Start-->
+
+    <div>
+        <h1>Contact Us</h1>
+      </div>
+      
+      <div>
+        <form action="/contact-submit" method="POST">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required>
+          <label for="message">Message</label>
+          <textarea name="message" id="message" required></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    <!--Contact Section End-->
+
+</body>
+</html>
