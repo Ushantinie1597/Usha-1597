@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PERSONAL PORTFOLIO </title>
     <link rel="stylesheet" href="style.js">
-    <style>
+      <style>
         /*Source: https://www.dafont.com/ */
 
                 @font-face {
@@ -34,10 +34,28 @@
                 section {
                 padding: 50px 10%;   
                 }  
+
                 body {
-                background: var(--bg-color);
-                color: var(--text-color);
+                height: 100vh;
+                width: 100%;
+                background: linear-gradient(45deg,#d2001a,#7462ff,#f48e21,#23d5ab);
+                color: #fff;
+                background-size: 300% 300%;
+                animation: color 12s ease-in-out infinite;
                 }
+
+                @keyframes color{
+                    0%{
+                        background-position: 0 50%;
+                    }
+                    50%{
+                        background-position: 100% 50%;
+                    }
+                    100%{
+                        background-position: 0 50%;
+                    }
+                }
+
                 ::selection {
                 background: var(--main-color);
                 color: var(--bg-color);
@@ -64,7 +82,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
-                background: var(--bg-color);
+                background: #7c7878;
                 padding: 13px 10%;
                 transition: 0.2s;
                 box-shadow: -3px -4px 8px #ffffff73,  2px  2px 5px rgb(27, 25, 25);
@@ -73,7 +91,7 @@
                 .logo {
                 font-size: 26px;
                 font-weight: 600;
-                color: var(--text-color);
+                color: #fff;
                 }
 
                 .logo span {
@@ -83,7 +101,7 @@
                 }
 
                 .navbar{
-                display: flex;
+                display:flex;
                 }
 
                 .navbar a{
@@ -95,6 +113,18 @@
 
                 .navbar a:hover {
                     color: var(--hover);
+                }
+
+                ul li{
+                    list-style: none;
+                    display: inline-block;
+                }
+
+                ul li a{
+                    color: white;
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin-right: 25px;
                 }
 
                 #menu icon{
@@ -126,7 +156,11 @@
 
                 .Home-img img {
                     width: 100%;
+                    height: 100vh;
+                    background-size: cover;
+                    background-position: center;
                 }
+
                 .Home-text span {
                     font-size: var(--medium-font);
                     font-weight: 500;
@@ -169,7 +203,9 @@
                 .btn:hover {
                     background: var(--hover);
                 }
-                .About-container { 
+
+               
+                .about { 
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     gap: 48px;
@@ -179,10 +215,11 @@
                     width: 50%;
                     border-radius: 11px;
                 }
-                .About-text p{
+                .about p{
                     font-size: var(--p-font);
                     font-weight: 400;
                     text-align: justify;
+                    
                 }
                 .Information {
                     margin: 16px 0 22px;
@@ -253,31 +290,22 @@
         <a href="#" class="logo">PORT<span>FOLIO</span>.</a>
         <div class="bx bx-menu" id="menu-icon"></div>
         <ul class="navbar">
-            <li><a href="#"></a>Home</li>
-            <li><a href="#"></a>About</li>
-            <li><a href="#"></a>Education Background</li>
-            <li><a href="#"></a>Working Experience</li>
-            <li><a href="#"></a>Projects</li>
-            <li><a href="#"></a>Skills and Achievements</li>
-            <li><a href="#"></a>Contact</li>
+            <li class="links"><a href="#home"></a>Home</li>
+            <li class="links"><a href="#About"></a>About</li>
+            <li class="links"><a href="#education"></a>Education Background</li>
+            <li class="links"><a href="#Experiences"></a>Working Experience</li>
+            <li class="links"><a href="#projects"></a>Projects</li>
+            <li class="links"><a href="#skills"></a>Skills and Achievements</li>
+            <li class="links"><a href="#contact"></a>Contact</li>
             <div class="bx bx-moon" id="darkmode"></div>
         </ul>
     </header>
    
-    
     <!--Home Section Start-->
-    <section class="Home" id="Home">
-        <div class="social">
-            <a href="#"><i class="bx bxl-github"></i></a>
-            <a href="#"><i class="bx bxl-LinkedIn"></i></a>
-        
-        </div>
-            <div class="Home-img">
-            <img src="main.png" alt="">
-        </div>
-            <div class="Home-text">
-                <span>Hello, I'm </span>
-                <h1>USHANTINIE UTHAYASURIAN</h1>
+    <section class="home" id="home">
+        <div class="Heading">
+                <h1>Hello, I'm</h1>
+                <span>USHANTINIE UTHAYASURIAN</span>
                 <h2>Fresh Graduate </h2>
                 <p>ELECTRONICS ENGINEER DELVING</p> 
                 <p> INTO THE WORLD OF WEB DEVELOPMENT!!!</p>
@@ -286,50 +314,22 @@
     <!--Home Section End-->
 
     <!--About Section Start-->
-    <section class="About" id="About">
+    <section class="about" id="about">
         <div class="Heading">
             <h2>About Me</h2>
             <span>Introduction</span>
-        </div>
-        <div class="About-container">
-            <div class="About-img">
-                <img src="main.png" alt="">
+            <p>As a fresh graduate in electronic engineering with a passion for software development. Seeking an entry-level position to 
+            kickstart my career in software engineering field where I can work collaboratively with a team of experienced developers to
+            design, develop, test, and deploy software applications that solve real-world problems.</p>
             </div>
-            <div class="About-text"> 
-            <p>As a fresh graduate in electronic engineering with a passion for
-                software development. Seeking an entry-level position to
-                kickstart my career in software engineering field where I can
-                work collaboratively with a team of experienced developers to
-                design, develop, test, and deploy software applications that
-                solve real-world problems.</p>
-                <span>Email Address:-</span>
-            <div class="Information">
-                <div class="info-box">
-                    <i class="bx bxs-user"></i>
-                    <span>u.ushantinie1597@gmail.com</span>
-                </div>
-                <span>Contact Number:-</span>
-                <div class="info-box">
-                    <i class="bx bxs-user"></i>
-                    <span>+60168334817</span>
-                </div>
-            </div>
-            
-            <embed src ="path/CV USHANTINIE UTHAYASORIAN.pdf" > <button>Download CV</button>
-           
-    
-          
-    </body>
-    </html>
-        </div>
-    </div>
+     
     </section>
     <!--About Section End-->
 
     <!--Education Background Section Start-->
     <section class="education" id="education">
         <div class="Heading">
-            <h2>Education Background</h2>
+            <h1>Education Background</h1>
             <span>Bachelor of Electronic Engineering Technology (Computer System) with Honors</span>
             <br>
             <span>at Universiti Malaysia Pahang</span>
@@ -355,7 +355,7 @@
     <!--Working Experience Section Start-->
     <section class="Experiences" id="Experiences">
         <div class="Heading">
-                <h2>Work Experiences</h2>
+                <h1>Work Experiences</h1>
                 <div class="work-entry">
                   <h3>Internship Trainee </h3>
                   <span> SMEC Malaysia</span>
@@ -421,7 +421,7 @@
 
     <!--Projects Section Start-->
     <section id="projects">
-        <h2>Projects</h2>
+        <h1>Projects</h1>
         <p>Final Year Project 2022</p>
         <span>The operation of the proposed water
             boat with wide range of extension arms. An algorithm has
@@ -432,7 +432,7 @@
             motor will move to the object for collect the trash.</span>
 
             <p>Open a PDF file <a href="C:\xampp\htdocs\PERSONAL WEBSITE\resume">example</a>.</p> 
-            
+
     </section>
 <!--Projects Section Start-->
 
@@ -486,22 +486,22 @@
 
     <!--Contact Section Start-->
 
-    <div>
-        <h1>Contact Us</h1>
+    <section class="contact" id="contact">
+        <div class="Heading">
+        <h1>Contact me</h1>
       </div>
-      
-      <div>
-        <form action="/contact-submit" method="POST">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" required>
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" required>
-          <label for="message">Message</label>
-          <textarea name="message" id="message" required></textarea>
-          <input type="submit" value="Submit">
-        </form>
-      </div>
-    <!--Contact Section End-->
+       <span>Email Address:-</span>
+            <div class="Information">
+                <div class="info-box">
+                    <i class="bx bxs-user"></i>
+                    <span>u.ushantinie1597@gmail.com</span>
+                </div>
+                <span>Contact Number:-</span>
+                <div class="info-box">
+                    <i class="bx bxs-user"></i>
+                    <span>+60168334817</span>
+                </div>
+            </div>
 
 </body>
 </html>
