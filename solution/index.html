@@ -138,43 +138,42 @@
                 font-size: 22px;
                 cursor: pointer;
                 }
-
-                .Home {
+                
+                 /* Additional styling for content sections */
+                 #home, #about, #education, #work, #projects, #skills, #contact {
+                height: 700px; /* Adjust height as needed */
+                margin-top: 80px; /* Add margin to offset the fixed nav bar */
+        }
+             
+                #home {
                     position: relative;
                     width: 100%;
-                    min-height: 100vh;
-                    display: grid;
-                    grid-template-columns: 0.2fr 1fr 1fr;
                     align-items: center;
-                    gap: 16px;
+                    gap: 10px;
+                    
                 }
 
-                .Home-img {
-                    order: 2;
-
+                #home h1{
+                    font-size: 70px;
+                    font-weight: 400px;
+                    text-align: justify;
                 }
 
-                .Home-img img {
-                    width: 100%;
-                    height: 100vh;
-                    background-size: cover;
-                    background-position: center;
+                #home span {
+                    font-size: 30px;
+                    font-weight: 100px;
+                    text-align:right;
+                    margin-right: 20px;
                 }
-
-                .Home-text span {
-                    font-size: var(--medium-font);
-                    font-weight: 500;
+                #home h2 {
+                    font-size: 55px;
+                    font-weight: 400px;
+                    text-align: justify;
                 }
-                .Home-text h1{
-                    font-size: var(--big-font);
-                }
-                .Home-text h2 {
-                    font-size: 20px;
-                    font-weight: 400;
-                }
-                .Home-text p {
-                    font-size: var(--p-font);
+                #home p {
+                    font-size: 60px;
                     font-weight: 800;
+                    text-align:center;
                     margin: 10px 0 20px;
                     color: rgb(102, 6, 78);     
                 }
@@ -204,38 +203,104 @@
                     background: var(--hover);
                 }
 
-               
                 .about { 
+                    position: relative;
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 3fr 3fr;
+                    align-items: center;
+                    gap: 16px;
+                }
+                
+                #about h2{
+                     font-size: 70px;
+                    font-weight: 400px;
+                    text-align: justify;
+                }
+
+                #about span{
+                    font-size: 35px;
+                    font-weight: 100px;
+                    text-align:right;
+                    margin-right: 20px;
+
+                }
+
+                #about p{
+                    letter-spacing: 1.5px;
+                    line-height: 35px;
+                    font-size: 20px;
+                    font-weight: 100px;
+                    text-align:center;
+                    margin-right: 20px;
+
+                }
+
+                #education { 
+
+                    display: grid;
+                    grid-template-columns: 0.2, 2fr, 1fr;
+                    gap: 70px;
+                    margin-top: 80px;
+
+                }
+                
+                #education  h1{
+                    font-size: 50px;
+                    font-weight: 400px;
+                    text-align: justify;
+                }
+
+                #education span{
+
+                    letter-spacing: 2px;
+                    line-height: 50px;
+                    font-size: 20px;
+                    font-weight: 100px;
+                    text-align:right;
+                    margin-right: 20px;
+                    
+                }
+
+                #work { 
+                    height: 1200px;
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     gap: 48px;
                     margin-top: 80px;
                 }
-                .About-img img {
-                    width: 50%;
-                    border-radius: 11px;
-                }
-                .about p{
+                
+                #work p{
                     font-size: var(--p-font);
                     font-weight: 400;
                     text-align: justify;
                     
                 }
-                .Information {
-                    margin: 16px 0 22px;
-                }
-                .Information .info-box {
-                    display: flex;
-                    align-items: left;
-                     text-align: left;
-                    margin-bottom: 22px;
-                }
-                .Information .info-box span{
-                    font-weight: 400;
-                    margin-left: 16px;
 
+                #projects { 
+
+
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 48px;
+                    margin-top: 80px;
                 }
-                .skills-container {
+              
+                #projects p{
+                    font-size: var(--p-font);
+                    font-weight: 400;
+                    text-align: justify;
+                    
+                }
+
+                #skills { 
+
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 48px;
+                }
+
+                #skills-container {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     align-items: center;
@@ -280,6 +345,29 @@
                     border-radius: 8px;
                     
                 }
+
+                #contact {
+
+                    display: grid;
+                    grid-template-columns: 0.2, 2fr, 1fr;
+                    gap: 500px;
+                    margin-top: 600px;
+                }
+
+                #contact Information {
+                    margin: 16px 0 22px;
+                }
+                .Information .info-box {
+                    display: flex;
+                    align-items: left;
+                     text-align: left;
+                    margin-bottom: 22px;
+                }
+                .Information .info-box span{
+                    font-weight: 400;
+                    margin-left: 16px;
+
+                }
             
 
                     </style>
@@ -289,48 +377,57 @@
     <header>
         <a href="#" class="logo">PORT<span>FOLIO</span>.</a>
         <div class="bx bx-menu" id="menu-icon"></div>
-        <ul class="navbar">
-            <li class="links"><a href="#home"></a>Home</li>
-            <li class="links"><a href="#About"></a>About</li>
-            <li class="links"><a href="#education"></a>Education Background</li>
-            <li class="links"><a href="#Experiences"></a>Working Experience</li>
-            <li class="links"><a href="#projects"></a>Projects</li>
-            <li class="links"><a href="#skills"></a>Skills and Achievements</li>
-            <li class="links"><a href="#contact"></a>Contact</li>
+        <ul id="navbar">
+            <li> <a class="nav-link" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#education">Education Background</a></li>
+            <li><a class="nav-link" href="#work">Working Experience</a></li>
+            <li><a class="nav-link" href="#projects">Projects</a></li>
+            <li><a class="nav-link" href="#skills">Skills and Achievements</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
             <div class="bx bx-moon" id="darkmode"></div>
+    
         </ul>
     </header>
    
     <!--Home Section Start-->
-    <section class="home" id="home">
+    <section>
+        <div id="home">
         <div class="Heading">
                 <h1>Hello, I'm</h1>
                 <span>USHANTINIE UTHAYASURIAN</span>
                 <h2>Fresh Graduate </h2>
                 <p>ELECTRONICS ENGINEER DELVING</p> 
-                <p> INTO THE WORLD OF WEB DEVELOPMENT!!!</p>
+                <p>INTO THE WORLD OF WEB </p>
+                <p>DEVELOPMENT!!!</p>
+                
             </div>
+        </div>
     </section>
     <!--Home Section End-->
 
     <!--About Section Start-->
-    <section class="about" id="about">
+    <section>
+        <div id="about">
         <div class="Heading">
-            <h2>About Me</h2>
-            <span>Introduction</span>
+            <h2><b>About Me</b></h2>
+            <span><b>Introduction</b></span>
             <p>As a fresh graduate in electronic engineering with a passion for software development. Seeking an entry-level position to 
             kickstart my career in software engineering field where I can work collaboratively with a team of experienced developers to
             design, develop, test, and deploy software applications that solve real-world problems.</p>
             </div>
-     
+        </div>
     </section>
     <!--About Section End-->
 
     <!--Education Background Section Start-->
-    <section class="education" id="education">
+    <section>
+        <div id="education">
         <div class="Heading">
-            <h1>Education Background</h1>
-            <span>Bachelor of Electronic Engineering Technology (Computer System) with Honors</span>
+            <h1><b>Education Background</b></h1>
+          
+            <span><b>Bachelor of Electronic Engineering Technology (Computer System) with Honors</b> </span>
+       
             <br>
             <span>at Universiti Malaysia Pahang</span>
         </br>
@@ -338,9 +435,9 @@
             <br>
             <span>CGPA: 3.20</span>
         </br>
-            
+    
         <br>
-            <span>Diploma Electronic Engineering</span>
+            <span><b>Diploma Electronic Engineering</b></span>
         <br>
             <span>at Polytechnic Seberang Perai, Pulau Pinang</span>
         </br>
@@ -349,11 +446,13 @@
             <span>CGPA: 3.03</span>
         </br>    
         </div>
+    </div>
         
     <!--Education Background Section End-->
 
     <!--Working Experience Section Start-->
-    <section class="Experiences" id="Experiences">
+    <section>
+        <div id="work">
         <div class="Heading">
                 <h1>Work Experiences</h1>
                 <div class="work-entry">
@@ -416,13 +515,17 @@
                 </ul>
               </div>
             
-
+            </div>
+        </section>
     <!--Working Experience Section End-->
 
     <!--Projects Section Start-->
-    <section id="projects">
+    <section>
+        <div id="projects">
+         <div class="Heading">
         <h1>Projects</h1>
         <p>Final Year Project 2022</p>
+        <p>Design and Development of Autonomous Water Surface Boat</p>
         <span>The operation of the proposed water
             boat with wide range of extension arms. An algorithm has
             been developed to task the microcontroller to read the inputs
@@ -430,14 +533,14 @@
             based on the sensed information take appropriate action.
             Once an object is detected by the ultrasonic sensors, the servo
             motor will move to the object for collect the trash.</span>
-
-            <p>Open a PDF file <a href="C:\xampp\htdocs\PERSONAL WEBSITE\resume">example</a>.</p> 
-
+        </div>
+    </div>
     </section>
 <!--Projects Section Start-->
 
     <!--Skills Section Start-->
-    <section class="skills" id="skills">
+    <section>
+        <div id="skills">
         <div class="Heading">
             <h2>Skills</h2>
             <span>My Skills</span>
@@ -480,16 +583,16 @@
 
             </div>
         </div>
-
+    </div>
     </section>
     <!--Skills Section End-->
 
     <!--Contact Section Start-->
 
-    <section class="contact" id="contact">
+    <section>
+        <div id="contact">
         <div class="Heading">
         <h1>Contact me</h1>
-      </div>
        <span>Email Address:-</span>
             <div class="Information">
                 <div class="info-box">
@@ -502,6 +605,54 @@
                     <span>+60168334817</span>
                 </div>
             </div>
+        </div>
+    </div>
+    </section>
+
+        <script>
+
+            let sections = document.querySelectorAll('section');
+            let navLinks = document.querySelectorAll('nav-link');
+
+            window.onscroll = () => {
+                sections.forEach(sec => {
+                    let top = window.scrollY;
+                    let offset = sec.offsetTop;
+                    let height = sec.offsetHeight;
+                    let id = sec.getAttribute('id');
+
+                    if(top >= offset && top < offset + height) {
+                        navLinks.forEach(links => {
+                            linksclassList.remove('active');
+                            document.querySelector('nav-link [href*=]' + id + ']').classList.add('active');
+
+                        });
+                    };
+                });
+            };
+
+            window.addEventListener("scroll", function () {
+                var sections = document.querySelectorAll("ul[id^='section']");
+                var navLinks = document.getElementsByClassName("nav-link");
+                var currentSection = "";
+    
+                sections.forEach(function (section) {
+                    var sectionTop = section.offsetTop;
+                    var sectionHeight = section.clientHeight;
+    
+                    if (window.pageYOffset >= sectionTop - sectionHeight / 2) {
+                        currentSection = section.getAttribute("id");
+                    }
+                });
+    
+                Array.from(navLinks).forEach(function (navLink) {
+                    navLink.classList.remove("active");
+                    if (navLink.getAttribute("href").substring(1) === currentSection) {
+                        navLink.classList.add("active");
+                    }
+                });
+            });
+        </script>
 
 </body>
 </html>
